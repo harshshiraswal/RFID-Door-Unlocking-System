@@ -5,6 +5,16 @@ A college mini project implementing an IoT-based door access control system usin
 ![Structural Overview](diagrams/rfid_door_structural.png)
 ![Technical Specifications](diagrams/rfid_door_technical.png)
 
+## 🎥 Project Demo
+
+### Hardware Setup
+![Component Setup](media/photos/component_setup.jpg)
+*Actual hardware components connected and ready for testing*
+
+### System in Action
+[View Demo Video](media/videos/system_demo.mp4)
+*Video demonstration of the RFID door unlock system working*
+
 ## 🚀 Project Overview
 
 This project demonstrates a complete RFID-based access control system that:
@@ -12,6 +22,17 @@ This project demonstrates a complete RFID-based access control system that:
 - Controls door locking mechanism using a solenoid lock
 - Provides secure access with unique ID verification
 - Uses Arduino as the main controller with proper power isolation
+
+## 💻 Arduino Code
+
+The complete Arduino code for the RFID door lock system is available in `src/arduino_code/rfid_door_lock.ino`
+
+### Key Features:
+- RFID card authentication
+- Solenoid lock control
+- Access logging via Serial monitor
+- Multiple authorized cards support
+- Fail-secure operation
 
 ## 🛠️ System Components
 
@@ -48,6 +69,40 @@ This project demonstrates a complete RFID-based access control system that:
 4. **Relay Activation** - Signal sent to relay module
 5. **Door Unlock** - Solenoid lock releases for access
 
+## 🔧 Installation & Setup
+
+Hardware Setup
+
+1. Connect components as per circuit diagram
+2. Ensure proper power connections
+3. Verify all ground connections are common
+
+Software Setup
+
+# Install Python dependencies for diagrams
+pip install -r requirements.txt
+
+# Generate circuit diagrams
+python src/generate_diagrams.py
+
+Arduino IDE Setup
+
+1. Install Arduino IDE
+2. Add MFRC522 library via Library Manager
+3. Upload src/arduino_code/rfid_door_lock.ino
+4. Open Serial Monitor at 9600 baud
+
+## 🖥️ Code Generation
+
+The circuit diagrams in this repository were generated using Python. To regenerate them:
+
+# Install dependencies
+pip install matplotlib numpy
+
+# Generate diagrams
+python src/generate_diagrams.py
+
+
 # 📊 Technical Specifications
 
 Operating Range: 0-60mm
@@ -62,12 +117,25 @@ RFID-Door-Unlocking-System/
 ├── diagrams/                 # Generated circuit diagrams
 │   ├── rfid_door_structural.png
 │   └── rfid_door_technical.png
-├── src/                     # Python diagram generator
-│   └── generate_diagrams.py
-├── docs/                    # Additional documentation
-│   └── component_specs.md
-├── README.md               # Project documentation
-└── requirements.txt        # Python dependencies
+├── media/                   # Actual project media
+│   ├── photos/
+│   │   ├── component_setup.jpg
+│   │   ├── wiring_closeup.jpg
+│   │   └── README.md
+│   └── videos/
+│       ├── system_demo.mp4
+│       └── README.md
+├── src/
+│   ├── generate_diagrams.py     # Python diagram generator
+│   └── arduino_code/
+│       └── rfid_door_lock.cpp   # Actual Arduino code
+├── docs/
+│   ├── component_specs.md
+│   └── installation_guide.md
+├── README.md
+├── requirements.txt
+├── .gitignore
+└── LICENSE
 
 # 🎯 Features
 

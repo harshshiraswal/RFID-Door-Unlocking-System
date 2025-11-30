@@ -1,2 +1,100 @@
-# RFID-Door-Unlocking-System
-IoT-based door access control system using RFID technology - College Mini Project
+# RFID-Based Door Unlocking System 🔒
+
+A college mini project implementing an IoT-based door access control system using RFID technology. This system allows secure door unlocking through RFID card authentication.
+
+![Structural Overview](diagrams/rfid_door_structural.png)
+![Technical Specifications](diagrams/rfid_door_technical.png)
+
+## 🚀 Project Overview
+
+This project demonstrates a complete RFID-based access control system that:
+- Authenticates users via RFID cards/tags
+- Controls door locking mechanism using a solenoid lock
+- Provides secure access with unique ID verification
+- Uses Arduino as the main controller with proper power isolation
+
+## 🛠️ System Components
+
+| Component | Specification | Purpose |
+|-----------|---------------|---------|
+| Arduino UNO | ATmega328P, 16MHz | Main microcontroller |
+| MFRC522 RFID | 13.56MHz, SPI interface | RFID card reading |
+| Relay Module | 5V DC, 10A capacity | Power switching |
+| Solenoid Lock | 12V DC, Fail-secure | Door locking mechanism |
+| Power Supply | 12V DC, 2A | System power |
+
+## 🔌 Circuit Connections
+
+### RFID Module Wiring
+- **SDA** → Digital Pin 10
+- **SCK** → Digital Pin 13
+- **MOSI** → Digital Pin 11
+- **MISO** → Digital Pin 12
+- **RST** → Digital Pin 9
+- **3.3V** → 3.3V Power
+- **GND** → Ground
+
+### Relay Module Wiring
+- **IN1** → Digital Pin 7
+- **VCC** → 5V Power
+- **GND** → Ground
+- **JD-VCC** → 12V External Power
+
+## 📋 System Workflow
+
+1. **Card Tap** - User presents RFID card to reader
+2. **UID Reading** - MFRC522 reads the unique card ID
+3. **Authentication** - Arduino verifies against authorized IDs
+4. **Relay Activation** - Signal sent to relay module
+5. **Door Unlock** - Solenoid lock releases for access
+
+# 📊 Technical Specifications
+
+Operating Range: 0-60mm
+Response Time: <2 seconds
+Power Requirements: 12V DC, 2A
+Communication: SPI + Wireless RFID
+Security: UID-based authentication
+Lock Type: Fail-secure
+
+# 📁 Project Structure
+RFID-Door-Unlocking-System/
+├── diagrams/                 # Generated circuit diagrams
+│   ├── rfid_door_structural.png
+│   └── rfid_door_technical.png
+├── src/                     # Python diagram generator
+│   └── generate_diagrams.py
+├── docs/                    # Additional documentation
+│   └── component_specs.md
+├── README.md               # Project documentation
+└── requirements.txt        # Python dependencies
+
+# 🎯 Features
+
+✅ RFID Card Authentication
+✅ Secure UID-based Access Control
+✅ Solenoid Lock Control
+✅ Power Isolation Protection
+✅ SPI Communication Protocol
+✅ Fail-Secure Lock Mechanism
+
+# 🔧 Skills Demonstrated
+
+Embedded Systems Programming
+RFID Technology Integration
+Circuit Design & Implementation
+Power Management
+SPI Communication Protocol
+Python Visualization
+Technical Documentation
+
+## 🖥️ Code Generation
+
+The circuit diagrams in this repository were generated using Python. To regenerate them:
+
+```bash
+# Install dependencies
+pip install matplotlib numpy
+
+# Generate diagrams
+python src/generate_diagrams.py

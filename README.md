@@ -25,7 +25,7 @@ This project demonstrates a complete RFID-based access control system that:
 
 ## 💻 Arduino Code
 
-The complete Arduino code for the RFID door lock system is available in `src/arduino_code/rfid_door_lock.ino`
+The complete Arduino code for the RFID door lock system is available in `src/arduino_code/rfid_door_lock.cpp`
 
 ### Key Features:
 - RFID card authentication
